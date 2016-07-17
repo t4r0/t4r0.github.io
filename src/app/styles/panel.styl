@@ -1,6 +1,8 @@
+@import 'animations/fadeUp';
+
 #panel-dismiss
   position absolute
-  bottom 4em
+  bottom 3.5em
   right 0
   left 0
   width 40px
@@ -9,19 +11,24 @@
   text-align center
   cursor pointer
   z-index 3
+  animation attention 2s ease-in-out 10
+  font-size 3.6em
+  text-decoration none
 
 full-page-panel
-  position relative
   width 100%
   height 100%
   display block
   overflow-y hidden
+  background-color $white
+  opacity 1
+
+  &.dismissed
+    animation up-out 600ms ease-out forwards
 
   main
-    position absolute
     display flex
     box-sizing border-box
-    top 0
     width 100%
     height 100% !important
     padding 2em 3em
@@ -29,50 +36,34 @@ full-page-panel
     text-align center
     justify-content center
     flex-direction column
-    background $bg-color
+    background linear-gradient(35deg, rgba($main, 0.6), rgba($secondary, 0.6)),
+               url('/assets/images/bg.png') no-repeat center top fixed,
+               linear-gradient(#fff, #fff)
+    background-size cover
+
     color $white
     transform-origin 50% 0
 
-    &.dismissed
-      animation up-out 600ms ease-out forwards
 
     h1
       margin 0
       font-size 5em
       font-weight bold
+      animation-delay 600ms
 
     h2
       font-weight normal
+      animation-delay 700ms
 
     h1, h2
+      @extends .fade-in-up
       text-transform uppercase
+      animation-fill-mode both
+      animation-duration 300ms
 
-    nav
-      position absolute
-      top 4em
-      right 0
-      left 0
-      width 100%
-
-
-@keyframes up-out {
-  0% {
-    transform none
-  }
-
-  10% {
-    transform scaleY(1.1)
-  }
-
-  50% {
-    transform scaleY(1)
-  }
-
-  80% {
-    transform scaleY(0.9)
-  }
-
-  100% {
-    transform translateY(-100%)
-  }
-}
+.main-nav
+  position absolute
+  top 4em
+  right 0
+  left 0
+  width 100%
