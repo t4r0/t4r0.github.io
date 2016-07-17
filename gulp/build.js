@@ -90,7 +90,14 @@ gulp.task('other', function () {
 });
 
 gulp.task('clean', function () {
-  return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]);
+  return $.del([
+    'index.html',
+    'favicon.ico',
+    'assets/**/*',
+    'scripts/**/*',
+    'styles/**/*',
+    path.join(conf.paths.tmp, '/')
+  ]);
 });
 
 gulp.task('build', ['html', 'fonts', 'other']);
