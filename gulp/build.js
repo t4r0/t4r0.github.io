@@ -92,7 +92,6 @@ gulp.task('other', function () {
 gulp.task('clean', function () {
   return $.del([
     'index.html',
-    'favicon.ico',
     'assets/**/*',
     'scripts/**/*',
     'styles/**/*',
