@@ -1,0 +1,78 @@
+#panel-dismiss
+  position absolute
+  bottom 4em
+  right 0
+  left 0
+  width 40px
+  margin 0 auto
+  color white
+  text-align center
+  cursor pointer
+  z-index 3
+
+full-page-panel
+  position relative
+  width 100%
+  height 100%
+  display block
+  overflow-y hidden
+
+  main
+    position absolute
+    display flex
+    box-sizing border-box
+    top 0
+    width 100%
+    height 100% !important
+    padding 2em 3em
+    z-index 2
+    text-align center
+    justify-content center
+    flex-direction column
+    background $bg-color
+    color $white
+    transform-origin 50% 0
+
+    &.dismissed
+      animation up-out 600ms ease-out forwards
+
+    h1
+      margin 0
+      font-size 5em
+      font-weight bold
+
+    h2
+      font-weight normal
+
+    h1, h2
+      text-transform uppercase
+
+    nav
+      position absolute
+      top 4em
+      right 0
+      left 0
+      width 100%
+
+
+@keyframes up-out {
+  0% {
+    transform none
+  }
+
+  10% {
+    transform scaleY(1.1)
+  }
+
+  50% {
+    transform scaleY(1)
+  }
+
+  80% {
+    transform scaleY(0.9)
+  }
+
+  100% {
+    transform translateY(-100%)
+  }
+}
