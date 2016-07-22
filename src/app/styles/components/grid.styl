@@ -1,0 +1,109 @@
+grid-container()
+  width 50%
+  height 20vw
+  float left
+  box-sizing border-box
+  display table
+  text-align justify
+  padding 0.1em
+  flex-shrink 1
+
+  @media only screen and (min-width 800px)
+    padding 0.75em
+    text-align left
+
+.grid
+  width 100%
+  margin 1.1em auto
+  max-width 92em
+
+  .icon
+    font-size 2.5em
+    .wrapper
+      text-align center
+
+  .medium, .main, .long
+    grid-container()
+
+
+  .right
+    float right !important
+
+  .clear
+    clear both
+
+  .medium
+    @media only screen and (min-width 800px)
+      width 25%
+
+  .main
+    width 100%
+    height 40vw
+
+    @media only screen and (min-width 800px)
+      width 50%
+
+  .long
+    width 100%
+    @media only screen and (max-width 600px)
+      height 50%
+
+    @media only screen and (min-width 800px)
+      width 75%
+
+  .half
+    width 50%
+
+  .transparent
+    color $white
+
+    h1
+      color $white
+
+    p
+      opacity 0.8
+
+  .purple .wrapper
+    background $accent
+
+  .white .wrapper
+    background $white
+
+    a
+      color $main
+
+  .green .wrapper
+    background $secondary
+
+    a
+      color $accent
+
+
+  .blue .wrapper
+    background $blue
+
+    a
+     color $white
+
+  a
+    color $secondary
+    cursor pointer
+    opacity 1 !important
+
+
+.wrapper
+  border-radius 5px
+  display table-cell
+  vertical-align middle
+
+  @media only screen and (min-width 800px)
+    padding 0 20px
+
+
+.text-wrapper
+  display block
+  padding 0 10px
+  p
+    line-height 1.3
+  @media only screen and (min-width 800px)
+    padding 0 60px
