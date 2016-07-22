@@ -18,8 +18,8 @@
             var offset = scope.getScrollOffset($window);
             var viewportSize = scope.getViewportSize($window);
             var coverage = {
-              x: parseInt(viewportSize.x * 0.6 + offset.x ),
-              y: parseInt(viewportSize.y * 0.6 + offset.y )
+              x: parseInt(viewportSize.x * 0.4 + offset.x ),
+              y: parseInt(viewportSize.y * 0.4 + offset.y )
             };
 
             if(angular.isDefined(targetOffset)){
