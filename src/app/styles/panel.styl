@@ -2,10 +2,10 @@
 
 #panel-dismiss
   position absolute
-  bottom 3.5em
   right 0
   left 0
   width 40px
+  bottom 10px
   margin 0 auto
   color white
   text-align center
@@ -14,6 +14,9 @@
   animation attention 2s ease-in-out 10
   font-size 3.6em
   text-decoration none
+
+  @media only screen and (min-width 800px)
+    bottom 3.5em
 
 full-page-panel
   width 100%
@@ -37,7 +40,7 @@ full-page-panel
     justify-content center
     flex-direction column
     background radial-gradient(rgba($secondary, 0.2), rgba($main, 0.9)),
-               url('/assets/images/bg.png') no-repeat center top,
+               url('/assets/images/bg.png') no-repeat center top fixed,
                linear-gradient(#fff, #fff)
     background-size cover
 
