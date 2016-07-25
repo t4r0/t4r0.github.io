@@ -1,0 +1,76 @@
+@import '../helpers/container';
+header
+  background $white
+  padding 1.1em 1.2em
+
+nav
+  background $white
+
+  ul
+    container()
+    display flex
+    flex-direction column
+    margin 0 auto
+    margin-top 1.1em
+    padding 0
+    transform translateX(-100%)
+
+    @media only screen and (min-width 800px)
+      flex-direction row
+      justify-content flex-end
+      transform none
+
+    @media only screen and (max-width 799px)
+      position absolute
+      top 0
+      bottom 0
+
+    li
+      list-style none
+      padding 0.8em 1em
+
+      a
+        color $accent-alt
+        text-transform uppercase
+        font-size 0.7em
+        position relative
+
+        &:before
+          content ''
+          position absolute
+          display block
+          width 100%
+          border-bottom 3px solid $accent-alt
+          bottom -5px
+          transform scaleX(0)
+          transition transform 0.2s ease-in-out
+
+        &:hover
+          &:before
+            transform none
+
+
+.info
+  container()
+
+  h1, h2
+    text-transform uppercase
+
+  h1
+    color $accent
+    font-size 1.3em
+    margin-bottom 0
+
+  h2
+    color $main
+    margin-top 5px
+
+  .divisor
+    color $text-color
+
+  .text-alt
+    color $accent-alt
+
+#t4r0
+  float left
+  margin-right 2.5em

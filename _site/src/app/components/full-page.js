@@ -7,10 +7,7 @@
         restrict: 'E',
         transclude: true,
         controller: 'FullPagePanelController',
-        templateUrl: 'app/templates/panel.html',
-        link: function(scope, element, attrs, ctrl){
-          scope.viewElement = element;
-        }
+        templateUrl: 'app/templates/panel.html'
       }
     }])
 })();

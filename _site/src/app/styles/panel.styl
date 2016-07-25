@@ -7,7 +7,8 @@
   width 40px
   bottom 10px
   margin 0 auto
-  color $accent-alt
+  color $accent !important
+  text-align center
   cursor pointer
   z-index 3
   animation attention 2s ease-in-out 10
@@ -22,13 +23,8 @@ full-page-panel
   height 100%
   display block
   overflow-y hidden
+  background-color $white
   opacity 1
-  position static
-  background radial-gradient(rgba($secondary, 0.2), rgba($secondary, 0.5), rgba($main, 0.2)),
-             $secondary
-  top 0
-  left 0
-  transform-origin 50% 70%
 
   &.dismissed
     animation up-out 600ms ease-out forwards
@@ -43,8 +39,13 @@ full-page-panel
     text-align center
     justify-content center
     flex-direction column
-    transition transform 0.1s ease-in
+    background radial-gradient(rgba($secondary, 0.2), rgba($main, 0.9)),
+               url('/assets/images/bg.png') no-repeat center top fixed,
+               linear-gradient(#fff, #fff)
+    background-size cover
+
     color $accent
+    transform-origin 50% 0
 
 
     h1
@@ -65,14 +66,10 @@ full-page-panel
 
 .main-nav
   position absolute
-  bottom 4em
+  top 4em
   right 0
   left 0
   width 100%
-  z-index 3
-
-  a
-    color $accent !important
 
 
 @media only screen and (min-width 768px)

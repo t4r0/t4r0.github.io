@@ -20,8 +20,6 @@ body
   background-color $bg-alt
 
 nav
-  transition background-color 0.2s ease-in
-
   ul
     padding-left 0
     display flex
@@ -37,10 +35,9 @@ nav
       font-size 1.2em
 
       a, a:visited, a:focus, a:hover
-        color $accent
+        color white
         text-decoration none
-        text-transform uppercase
-        font-size 0.8em
+        text-transform capitalize
         position relative
         font-weight normal
 
@@ -52,7 +49,7 @@ nav
         display block
         transform scaleX(0)
         transform-origin 50% 0
-        border-bottom solid $accent 3px
+        border-bottom solid white 5px
         transition transform 0.2s ease-in-out
 
       a:hover:before
