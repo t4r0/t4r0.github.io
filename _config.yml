@@ -1,0 +1,41 @@
+name: Estuardo Diaz
+description: UX Designer / Web Developer
+avatar: 
+
+footer-links:
+  dribble:
+  email:
+  facebook:
+  flickr:
+  github: t4r0
+  instagram:
+  linkedin:
+  pinterest:
+  twitter: t4r0_o
+
+google_analytics:
+
+url: "http://www.t4r0.me"
+markdown: kramdown
+permalink: /:title/
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+sass:
+  style: :compressed
+  sass_dir: ./src/theme
+
+gems:
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+
+exclude: [ Gemfile, Gemfile.lock, LICENSE, README.md, CNAME, gulpfile.js, karma.conf.js, package.json, params.json, protractor.conf.js, ./src/**]
